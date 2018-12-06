@@ -13,6 +13,8 @@
 #ifndef ___CAR_H
 #define ___CAR_H
 
+#define MAX_CARS_IN_PARK 6
+
 enum CarType{
   AIXAM, FIAT_MULTIPLA, JEEP
 };
