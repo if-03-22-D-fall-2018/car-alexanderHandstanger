@@ -52,7 +52,21 @@ int get_speed(Car car){
 }
 
 void set_acceleration_rate(Car car, int rate){
-
+  if(car->accelerate < 0){
+    car->accelerate = -8;
+  }
+  else if(car->car_type == AIXAM && rate > 1.0){
+    car->accelerate = 1.0;
+  }
+  else if(car->car_type == FIAT_MULTIPLA && rate > 2.26){
+    car->accelerate = 2.26;
+  }
+  else if(car->car_type == JEEP && rate > 3.14){
+    car->accelerate = 3.14;
+  }
+  else{
+    car->accelerate = rate;
+  }
 }
 
 void accelerate(Car car){
