@@ -51,7 +51,7 @@ int get_speed(Car car){
   return car->speed;
 }
 
-void set_acceleration_rate(Car car, int rate){
+void set_acceleration_rate(Car car, double rate){
   if(car->accelerate < 0){
     car->accelerate = -8;
   }
