@@ -70,12 +70,15 @@ void set_acceleration_rate(Car car, double rate){
 }
 
 void accelerate(Car car){
-
+  if(car->accelerate < 45){
+    car->speed = car->accelerate * 4;
+  }
 }
 
 void init(){
   for (int i = 0; i < MAX_CARS_IN_PARK; i++) {
     car_park[i]->is_avaible = true;
     car_park[i]->accelerate = 0;
+    car_park[i]->speed = 0;
   }
 }
